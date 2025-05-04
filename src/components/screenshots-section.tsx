@@ -1,18 +1,12 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
 export function ScreenshotsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-  
-  const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   
   const screenshots = [
@@ -47,14 +41,19 @@ export function ScreenshotsSection() {
     setIsLoaded(true);
     const interval = setInterval(() => {
       if (carouselRef.current && isLoaded) {
-        setCurrentIndex((prevIndex) => {
-          const nextIndex = (prevIndex + 1) % screenshots.length;
-          const scrollPos = nextIndex * 290; // Adjust based on your item width + gap
-          carouselRef.current?.scrollTo({
-            left: scrollPos,
-            behavior: 'smooth'
-          });
-          return nextIndex;
+        // Get current scroll position
+        const scrollPos = carouselRef.current.scrollLeft;
+        const itemWidth = 290; // Width + gap
+        const totalItems = screenshots.length;
+        
+        // Calculate next position
+        const currentPos = Math.round(scrollPos / itemWidth);
+        const nextPos = (currentPos + 1) % totalItems;
+        
+        // Scroll to next position
+        carouselRef.current.scrollTo({
+          left: nextPos * itemWidth,
+          behavior: 'smooth'
         });
       }
     }, 3000);

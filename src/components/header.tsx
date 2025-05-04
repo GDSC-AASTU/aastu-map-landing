@@ -55,7 +55,7 @@ export function Header() {
       scrolled 
         ? "border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur" 
         : "bg-transparent border-transparent",
-      atTop && scrollDirection === "down" ? "opacity-0 -translate-y-full" : "opacity-100 translate-y-0"
+      isHeaderVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
     )}>
       <div className="container flex h-16 items-center justify-between px-12">
         <Logo />

@@ -77,7 +77,7 @@ export function AboutSection() {
             )}>
               <h3 className="text-2xl font-bold mb-4">Unique Value Proposition</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                AASTU Map stands out as more than just a navigation tool - it's a comprehensive digital companion that enhances the entire campus experience. By combining intelligent navigation with community features and personalized content, it creates a seamless bridge between physical spaces and digital interaction within the university environment.
+                AASTU Map stands out as more than just a navigation tool - it&apos;s a comprehensive digital companion that enhances the entire campus experience. By combining intelligent navigation with community features and personalized content, it creates a seamless bridge between physical spaces and digital interaction within the university environment.
               </p>
               <h3 className="text-2xl font-bold mb-4">Future Vision</h3>
               <p className="text-gray-600 dark:text-gray-400">
