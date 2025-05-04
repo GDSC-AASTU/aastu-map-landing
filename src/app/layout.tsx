@@ -93,6 +93,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={`${urbanist.variable} font-urbanist antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
