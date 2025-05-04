@@ -63,7 +63,9 @@ export function Header() {
           <ThemeToggle />
           <div className="hidden md:flex gap-2">
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1tC-24sqO_GslKx3Vkys57cLM3qapTjKl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 "inline-flex items-center gap-1 rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 scrolled
@@ -75,7 +77,7 @@ export function Header() {
               <span>Download APK</span>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/GDSC-AASTU/aastu-map-opensource"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

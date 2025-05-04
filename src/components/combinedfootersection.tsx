@@ -5,11 +5,13 @@ import { cn } from "@/lib/utils";
 import { Download, Github, Twitter, Instagram } from "lucide-react";
 import { Logo } from "./logo";
 import { useEffect, useState } from "react";
+import { IosWaitlistDialog } from "./ios-waitlist-dialog";
 
 export function CombinedFooterSection() {
   const currentYear = new Date().getFullYear();
   const [dotsPositions, setDotsPositions] = useState<Array<{top: string, left: string}>>([]);
   const [smallDotsPositions, setSmallDotsPositions] = useState<Array<{top: string, left: string}>>([]);
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   
   useEffect(() => {
     // Generate positions only on the client side
@@ -86,7 +88,9 @@ export function CombinedFooterSection() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#"
+              href="https://drive.google.com/file/d/1tC-24sqO_GslKx3Vkys57cLM3qapTjKl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 "inline-flex items-center gap-2 rounded-lg px-6 py-3 text-md font-medium",
                 "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
@@ -95,10 +99,10 @@ export function CombinedFooterSection() {
               <Download className="h-5 w-5" />
               <span>Download for Android</span>
             </motion.a>
-            <motion.a
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#"
+              onClick={() => setIsWaitlistOpen(true)}
               className={cn(
                 "inline-flex items-center gap-2 rounded-lg px-6 py-3 text-md font-medium",
                 "bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
@@ -106,7 +110,7 @@ export function CombinedFooterSection() {
             >
               <Download className="h-5 w-5" />
               <span>Download for iOS</span>
-            </motion.a>
+            </motion.button>
           </div>
           <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">
             Available for free on Android and iOS devices.
@@ -127,7 +131,7 @@ export function CombinedFooterSection() {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/GDSC-AASTU/aastu-map-opensource" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={cn(
@@ -169,6 +173,12 @@ export function CombinedFooterSection() {
           </div>
         </div>
       </div>
+
+      {/* iOS Waitlist Dialog */}
+      <IosWaitlistDialog 
+        isOpen={isWaitlistOpen} 
+        onClose={() => setIsWaitlistOpen(false)} 
+      />
     </section>
   );
 } 

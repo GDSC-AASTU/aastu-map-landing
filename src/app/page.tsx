@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/about-section";
 import { CombinedFooterSection } from "@/components/combinedfootersection";
+import { CommunitySection } from "@/components/community-section";
 import { FeaturesSection } from "@/components/features-section";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
@@ -14,6 +15,7 @@ export default function Home() {
         <FeaturesSection />
         <AboutSection />
         <ScreenshotsSection />
+        <CommunitySection />
         <CombinedFooterSection />
       </main>
     </div>

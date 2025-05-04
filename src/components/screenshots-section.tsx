@@ -11,27 +11,36 @@ export function ScreenshotsSection() {
   
   const screenshots = [
     {
-      url: "https://placehold.co/640x1280/1e3a8a/FFFFFF?text=AASTU+Map+1",
+      url: "/screenshot/2.jpg",
+      alt: "AASTU Map Screenshot - SignUp",
+    },
+    {
+      url: "/screenshot/1.jpg",
       alt: "AASTU Map Screenshot - Home Screen",
     },
+    
     {
-      url: "https://placehold.co/640x1280/0ea5e9/FFFFFF?text=AASTU+Map+2",
-      alt: "AASTU Map Screenshot - Navigation",
-    },
-    {
-      url: "https://placehold.co/640x1280/2563eb/FFFFFF?text=AASTU+Map+3",
+      url: "/screenshot/3.jpg",
       alt: "AASTU Map Screenshot - Building Details",
     },
     {
-      url: "https://placehold.co/640x1280/4f46e5/FFFFFF?text=AASTU+Map+4",
-      alt: "AASTU Map Screenshot - Community",
+      url: "/screenshot/4.jpg",
+      alt: "AASTU Map Screenshot - Places",
     },
     {
-      url: "https://placehold.co/640x1280/2563eb/FFFFFF?text=AASTU+Map+3",
+      url: "/screenshot/5.jpg",
       alt: "AASTU Map Screenshot - Building Details",
     },
     {
-      url: "https://placehold.co/640x1280/4f46e5/FFFFFF?text=AASTU+Map+4",
+      url: "/screenshot/6.jpg",
+      alt: "AASTU Map Screenshot - Assistant Bot",
+    },
+    {
+      url: "/screenshot/7.jpg",
+      alt: "AASTU Map Screenshot - About",
+    },
+    {
+      url: "/screenshot/8.jpg",
       alt: "AASTU Map Screenshot - Community",
     },
   ];

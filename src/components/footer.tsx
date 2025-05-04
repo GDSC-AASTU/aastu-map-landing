@@ -51,7 +51,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/GDSC-AASTU/aastu-map-opensource" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={cn(
