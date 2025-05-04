@@ -1,37 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AASTU Map - Campus Navigation
 
-## Getting Started
+![AASTU Map Preview](public/preview.png)
 
-First, run the development server:
+## Overview
 
+AASTU Map is an intelligent campus navigation application designed for Addis Ababa Science and Technology University students, faculty, and visitors. This repository contains the landing page for the AASTU Map application, built with modern web technologies.
+
+The landing page showcases the app's features, provides download links, and explains how the app transforms campus navigation by helping users find buildings, classrooms, offices, and other important locations quickly and easily.
+
+## 🚀 Features
+
+- **Modern Design**: Built with a contemporary UI featuring smooth transitions and animations
+- **Responsive Layout**: Optimized for all device sizes from mobile to desktop
+- **Dark Mode Support**: Fully implemented light and dark themes
+- **Performance Optimized**: Fast loading and rendering for excellent user experience
+- **SEO Ready**: Comprehensive metadata for better search engine visibility
+
+## 🛠️ Tech Stack
+
+- **Next.js** - React framework with server-side rendering and static site generation
+- **TypeScript** - Type-safe JavaScript for improved developer experience
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- **Framer Motion** - Animation library for React
+- **Lucide Icons** - Beautiful, consistent icon set
+- **Urbanist Font** - Clean, modern typeface for excellent readability
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+- Node.js 16.x or higher
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/aastu_map_landing.git
+cd aastu_map_landing
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚢 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This site is designed to be easily deployed to platforms like Vercel, Netlify, or any other service that supports Next.js applications.
 
-## Learn More
+### Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+The easiest way to deploy the app is to use the [Vercel Platform](https://vercel.com/new).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to a GitHub repository
+2. Import the project to Vercel
+3. Vercel will detect that you're using Next.js and set up the build configuration for you
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Contributions are welcome! If you'd like to help improve the AASTU Map landing page, please follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# aastu-map-landing
+### Coding Guidelines
+
+- Follow the existing code style and organization
+- Write clean, maintainable, and testable code
+- Add comments for complex logic
+- Update documentation as needed
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Credits
+
+Developed by Google Developers Group on Campus AASTU.
+
+---
+
+Made with ❤️ for Addis Ababa Science and Technology University

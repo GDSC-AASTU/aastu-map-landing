@@ -4,9 +4,28 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Download, Github, Twitter, Instagram } from "lucide-react";
 import { Logo } from "./logo";
+import { useEffect, useState } from "react";
 
 export function CombinedFooterSection() {
   const currentYear = new Date().getFullYear();
+  const [dotsPositions, setDotsPositions] = useState<Array<{top: string, left: string}>>([]);
+  const [smallDotsPositions, setSmallDotsPositions] = useState<Array<{top: string, left: string}>>([]);
+  
+  useEffect(() => {
+    // Generate positions only on the client side
+    const largeDots = Array.from({ length: 30 }).map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`
+    }));
+    
+    const smallDots = Array.from({ length: 20 }).map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`
+    }));
+    
+    setDotsPositions(largeDots);
+    setSmallDotsPositions(smallDots);
+  }, []);
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -16,27 +35,27 @@ export function CombinedFooterSection() {
       {/* Background gradient for the entire section */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-gray-950 -z-10"></div>
       
-      {/* Location dot pattern overlay */}
+      {/* Location dot pattern overlay - Only rendered after client-side hydration */}
       <div className="absolute inset-0 -z-5">
         <div className="absolute w-full h-full">
-          {Array.from({ length: 30 }).map((_, i) => (
+          {dotsPositions.map((position, i) => (
             <div 
-              key={i}
+              key={`large-dot-${i}`}
               className="absolute w-2 h-2 rounded-full bg-blue-400/20 dark:bg-blue-400/10"
               style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
+                top: position.top,
+                left: position.left,
                 transform: 'translate(-50%, -50%)'
               }}
             ></div>
           ))}
-          {Array.from({ length: 20 }).map((_, i) => (
+          {smallDotsPositions.map((position, i) => (
             <div 
-              key={i}
+              key={`small-dot-${i}`}
               className="absolute w-1 h-1 rounded-full bg-blue-500/30 dark:bg-blue-500/20"
               style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
+                top: position.top,
+                left: position.left,
                 transform: 'translate(-50%, -50%)'
               }}
             ></div>

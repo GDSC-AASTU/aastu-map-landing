@@ -1,5 +1,5 @@
 import { AboutSection } from "@/components/about-section";
-import { CombinedFooterSection } from "@/components/combined-footer-section";
+import { CombinedFooterSection } from "@/components/combinedfootersection";
 import { FeaturesSection } from "@/components/features-section";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
