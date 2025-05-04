@@ -11,8 +11,12 @@ export function Header() {
   const [atTop, setAtTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("none");
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [initialized, setInitialized] = useState(false);
   
   useEffect(() => {
+    // Set initialized to true once component mounts
+    setInitialized(true);
+    
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
@@ -40,6 +44,9 @@ export function Header() {
       setLastScrollY(currentScrollY);
     };
 
+    // Run the handler once to set initial state correctly
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -47,7 +54,8 @@ export function Header() {
   }, [lastScrollY]);
 
   // Determine if header should be visible
-  const isHeaderVisible = scrolled || !atTop || scrollDirection === "up";
+  // Always show header initially or when atTop/scrolled up
+  const isHeaderVisible = !initialized || atTop || scrolled || scrollDirection === "up";
   
   return (
     <header className={cn(
