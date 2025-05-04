@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://aastu-map.vercel.app"),
+  metadataBase: new URL("https://aastu-map-project.web.app"),
   alternates: {
     canonical: "/",
   },

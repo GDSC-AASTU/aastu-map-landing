@@ -58,11 +58,45 @@ yarn dev
 
 ## 🚢 Deployment
 
-This site is designed to be easily deployed to platforms like Vercel, Netlify, or any other service that supports Next.js applications.
+This site can be deployed in multiple ways:
+
+### Deploy to Firebase Hosting with GitHub Actions
+
+The project is configured for automated deployment to Firebase Hosting using GitHub Actions:
+
+1. Push your code to the main branch of your GitHub repository
+2. GitHub Actions will automatically build and deploy to Firebase Hosting
+3. Your site will be live at [https://aastu-map-project.web.app](https://aastu-map-project.web.app)
+
+#### Setting up GitHub Actions for Firebase Deployment
+
+1. In your GitHub repository, go to Settings > Secrets and variables > Actions
+2. Add a new repository secret named `FIREBASE_SERVICE_ACCOUNT` with your Firebase service account JSON as the value
+3. The GitHub Actions workflow is already configured in `.github/workflows/firebase-deploy.yml`
+
+### Manual Firebase Deployment
+
+To manually deploy to Firebase:
+
+1. Make sure you have the Firebase CLI installed:
+```bash
+npm install -g firebase-tools
+```
+
+2. Login to Firebase:
+```bash
+firebase login
+```
+
+3. Build and deploy:
+```bash
+npm run build
+npm run firebase:deploy
+```
 
 ### Deploy to Vercel
 
-The easiest way to deploy the app is to use the [Vercel Platform](https://vercel.com/new).
+The site can also be deployed to Vercel:
 
 1. Push your code to a GitHub repository
 2. Import the project to Vercel
